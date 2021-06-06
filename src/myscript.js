@@ -16,7 +16,7 @@
                     return data.json()
                 })
                 .then(res => {
-                    const giphyUrl = 'https://api.giphy.com/v1/gifs/search?api_key=GnMcn23xwvNLTkuY4JiCKKA3kCbgG9Ju&q=' + res.weather[0].main + '+dog&limit=25&offset=0&rating=g&lang=en';
+                    const giphyUrl = 'https://api.giphy.com/v1/gifs/search?api_key=GnMcn23xwvNLTkuY4JiCKKA3kCbgG9Ju&q=' + res.weather[0].main + '+weather+dog&limit=5&offset=0&rating=g&lang=en';
                     document.getElementById("location").innerHTML = res.name;
                     document.getElementById("weather").innerHTML = res.weather[0].main;
                     document.getElementById("temp").innerHTML = (res.main.temp - 273.15).toFixed(1);
@@ -26,7 +26,7 @@
                             return data.json()
                         })
                         .then(res => {
-                           document.getElementById("giphy").setAttribute('src', res.data[0].embed_url);
+                           document.getElementById("giphy").setAttribute('src', res.data[Math.floor(Math.random() * 5) + 1].embed_url);
                         });
                 });
 
