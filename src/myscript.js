@@ -27,6 +27,7 @@
                         })
                         .then(res => {
                            document.getElementById("giphy").setAttribute('src', res.data[Math.floor(Math.random() * 5) + 1].embed_url);
+                           console.log(res.data[Math.floor(Math.random() * 5) + 1]);
                         });
                 });
 
