@@ -9,4 +9,30 @@
     width: 100%;
     height: 300px;
     border: none;
+    margin-bottom: 50px;
+}
+
+#button {
+    background-color: #4d4dff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    position: absolute;
+    margin-left: 45%;
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.refresh {
+    margin-left: 200px;
+    position: absolute;
+    top: 50%;
 }
